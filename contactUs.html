@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!--import charset metadata with title Home-Page. Call to the CSS and JavaScript pages.-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- javascript alert message which is displayed once form send button is pushed -->
+    <script>
+        function myFunction() {
+            alert("Thank you! Your message has been sent");
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Start of the Header Section -->
+
+    <div class="header">
+        <div class="imageHeader">
+            <div id="logoImage">
+                <!--Logo image in header, with a link that takes user to the home page when clicked-->
+                <a href="homePage.html">
+                    <img src="images/logo.png" alt="logo image">
+                </a>
+                <!--Name of Website in header-->
+                <h1 style="color: white; text-align: center;background-color: black;">3 T's Company</h1>
+            </div>
+            <!--Image of shopping cart in header-->
+            <div id="shoppingCartImage">
+                <a href="shopping_cart.html" style="background-color: black; padding: 5px;"><img src="images/download.png" alt="shopping cart" class="cartImage"></a><span class="itemCount" style="color: white ;background-color: black;">0</span>
+            </div>
+        </div>
+        <!--Start of section of menu buttons that will take user to the various html pages-->
+        <div class="menuButtons">
+            <ul>
+                <li>
+                    <!-- Menu tab is a link that Takes user to home page-->
+                    <a href="homePage.html">Home</a>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to clothing page-->
+                    <a href="clothesPage.html">Clothing</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered clothing page for specific categories-->
+                        <li>
+                            <a href="clothesPage.html">All</a>
+                        </li>
+                        <li>
+                            <!-- each subsection links to section page with active filter -->
+                            <a href="clothesPage.html?filter=shirts">Shirts</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=pants">Pants</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=hats">Hats</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=shoes">Shoes</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to recreation page-->
+                    <a href="recreation.html">Recreation</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered recreation page for specific categories-->
+                        <li>
+                            <a href="recreation.html">All</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=outdoor">Outdoor</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=exercise">Exercise</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=running">Running</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=hiking">Hiking</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to tech page-->
+                    <a href="tech.html">Tech</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered TECH page for specific categories-->
+                        <li>
+                            <a href="tech.html">All</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=phone">Phones</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=laptop">Laptops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=desktop">Desktops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=accessories">Accessories</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to food page-->
+                    <a href="Food.html?filter=all">Food</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered food page for specific categories-->
+                        <li>
+                            <a href="Food.html">All</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=fruit">Fruit</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=vegetable">Vegetables</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=meat">Meat</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=dairy">Dairy</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Menu tab is a link that Takes user to about page-->
+                <li><a href="contactUs.html">About</a></li>
+                <!-- Menu tab is a link that Takes user to log in page-->
+                <li><a href="login-page.html">Log in</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of the header section -->
+
+    <main class="main-content" id="MainContent" role="main">
+        <div class="page-width">
+            <h1 class="small--text-center">Contact Us</h1>
+            <!-- Displayes contact information -->
+            <div class="content-block">
+                <div class="rte">
+                    <h4>Give us a call</h4>
+                    <p>555-555-5555<br>2150 Virginia Street, New York, NY 60154<br><a href="mailto:name@company.com">name@company.com</a></p>
+                    <h4>Operation hours</h4>
+                    <p>Monday - Friday: 6:30am&nbsp;- 6:30pm<br>Saturday and Sunday: 8:00am - 4:00pm</p>
+                </div>
+            </div>
+            <!-- contains form for submitted message front end only -->
+            <div class="content-block">
+                <div class="contact-form form-vertical">
+                    <form method="get" id="contact_form" accept-charset="UTF-8" class="contact-form"><input type="hidden" name="form_type" value="contact"><input type="hidden" name="utf8" value="✓">
+
+                        <div class="grid grid--half-gutters">
+                            <div class="grid__item medium-up--one-half">
+                                <label for="ContactFormName" class="label--hidden">Name</label>
+                                <input type="text" id="ContactFormName" name="contact[name]" placeholder="Name" value="">
+                            </div>
+                            <div class="grid__item medium-up--one-half">
+                                <label for="ContactFormEmail" class="label--hidden">Email</label>
+                                <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="Email" autocorrect="off" autocapitalize="off" value="">
+                            </div>
+                        </div>
+
+                        <label for="ContactFormPhone" class="label--hidden">Phone Number</label>
+                        <input type="tel" id="ContactFormPhone" name="contact[phone]" placeholder="Phone Number" pattern="[0-9\-]*" value="">
+
+                        <label for="ContactFormMessage" class="label--hidden">Message</label>
+                        <textarea rows="10" id="ContactFormMessage" name="contact[body]" placeholder="Message"></textarea>
+
+                        <input type="submit" class="btn" value="Send" onclick="myFunction()">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="creator-content-block">
+            <!-- table showing student involvment -->
+            <table id="creator-table">
+                <tr>
+                    <th colspan="3" style="border-bottom: 2px solid black; background-color: black; color: gray;">Group 18</th>
+                </tr>
+                <tr class="tRow">
+                    <th>Student Name</th>
+                    <th>Work</th>
+                    <th>%</th>
+                </tr>
+                <tr>
+                    <td>Thomas Bozek</td>
+                    <td>2 HTML Pages, 43 CSS Styles, 4 JavaScript Functions</td>
+                    <td>33.3%</td>
+                </tr>
+                <tr>
+                    <td>Tej Singh</td>
+                    <td>3 HTML Pages, 43 CSS Styles, 4 JavaScript Functions</td>
+                    <td>33.3%</td>
+                </tr>
+                <tr>
+                    <td>Trevor Drumb</td>
+                    <td>2 HTML Page, 43 CSS Styles, 1 JavaScript Function</td>
+                    <td>33.3%</td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+
+    <footer>
+        <!-- Address tag centered and button which brings you back to top of page -->
+        <address id="Footer">
+            <a id="button" href="homePage.html">Back to Top</a><br><br>
+            <div class="rowFooter">
+                <div class="columnFooter">
+            <!--contact, support, and about sample information provided in footer-->
+                    <h3>Contact</h3>
+                    <p style=color:gray;>2150 Virginia Street, New York, NY 60154<br> 555-555-5555<br> name@company.com
+                    </p>
+                </div>
+                <div class="columnFooter">
+                    <h3>Support</h3>
+                    <p style=color:gray;>Terms and Conditions <br> Privacy Policy <br> Return Policy</p>
+                </div>
+                <div class="columnFooter">
+                    <h3>About</h3>
+                    <p style=color:gray;>About <br> News <br> Contact</p>
+                </div>
+            </div>
+        </address>
+    </footer>
+
+</body>
+
+</html>

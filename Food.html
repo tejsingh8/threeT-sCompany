@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--import charset metadata with title Home-Page. Call to the CSS and JavaScript pages.-->
+    <meta charset="utf-8">
+    <title>Food</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript.js" async></script>
+
+
+</head>
+
+<body>
+
+    <!-- Start of the Header Section -->
+    <!-- Start of the Header Section -->
+    <div class="header">
+        <div class="imageHeader">
+            <div id="logoImage">
+                <!--Logo image in header, with a link that takes user to the home page when clicked-->
+                <a href="homePage.html">
+                    <img src="images/logo.png" alt="logo image">
+                </a>
+                <!--Name of Website in header-->
+                <h1 style="color: white; text-align: center;background-color: black;">3 T's Company</h1>
+            </div>
+            <!--Image of shopping cart in header-->
+            <div id="shoppingCartImage">
+                <img src="images/download.png" alt="shopping cart" class="cartImage"><span class="itemCount" style="color: white ;background-color: black;">0</span>
+            </div>
+        </div>
+        <!--Start of section of menu buttons that will take user to the various html pages-->
+        <div class="menuButtons">
+            <ul>
+                <li>
+                    <!-- Menu tab is a link that Takes user to home page-->
+                    <a href="homePage.html">Home</a>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to clothing page-->
+                    <a href="clothesPage.html">Clothing</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered clothing page for specific categories-->
+                        <li>
+                            <a href="clothesPage.html">All</a>
+                        </li>
+                        <li>
+                            <!-- each subsection links to section page with active filter -->
+                            <a href="clothesPage.html?filter=shirts">Shirts</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=pants">Pants</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=hats">Hats</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=shoes">Shoes</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to recreation page-->
+                    <a href="recreation.html">Recreation</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered recreation page for specific categories-->
+                        <li>
+                            <a href="recreation.html">All</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=outdoor">Outdoor</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=exercise">Exercise</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=running">Running</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=hiking">Hiking</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to tech page-->
+                    <a href="tech.html">Tech</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered tech page for specific categories-->
+                        <li>
+                            <a href="tech.html">All</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=phone">Phones</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=laptop">Laptops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=desktop">Desktops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=accessories">Accessories</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to food page-->
+                    <a href="Food.html?filter=all">Food</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered food page for specific categories-->
+                        <li>
+                            <a href="Food.html">All</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=fruit">Fruit</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=vegetable">Vegetables</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=meat">Meat</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=dairy">Dairy</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Menu tab is a link that Takes user to about page-->
+                <li><a href="contactUs.html">About</a></li>
+                <!-- Menu tab is a link that Takes user to log in page-->
+                <li><a href="login-page.html">Log in</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of the header section -->
+    <!-- End of the header section -->
+
+    <!-- Start of the body for the Food content -->
+    <main>
+        <!--start of body section with the title of the Food category-->
+        <div id="body">
+            <div id="bodyContainer">
+                <div id="bodyHeading">
+                    <h1>Food</h1>
+                </div>
+                <!--Filter button that will filter the items into categories based on the filter label-->
+
+                <div class="filterBy">
+                    <div class="menuButtons">
+                        <div id="myBtnContainer">
+                            <ul>
+                                <li class="filterByHeading">
+                                    Filter By
+                                    <ul>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('all')" id="all"> Show
+                                                all</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('fruit')"> Fruit</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('vegetables')">
+                                                Vegetables</button>
+                                        </li>
+                                        <button class="btn" onclick="filterSelection('dairy')"> Dairy</button>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('meat')"> Meat</button>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--Start of the section where the items for the food category will be listed. Each food item contains an image of the item, along with the name and price.-->
+            <div class="container">
+                <div id="items">
+                    <div class="row">
+                        <div class="filterDiv fruit">
+                            <img src="images/Fruit/Avocado.png" alt="image=Avocado">
+                            <h4>Avocado</h4>
+                            <p>$1.66</p>
+                        </div>
+
+
+                        <div class="filterDiv fruit">
+                            <img src="images/Fruit/Banana.png" alt="image=Banana">
+                            <h4>Banana</h4>
+                            <p>$0.23</p>
+                        </div>
+
+                        <div class="filterDiv fruit">
+                            <img src="images/Fruit/lemon.png" alt="image=Lemon">
+
+                            <h4>Lemon</h4>
+                            <p>$0.59</p>
+                        </div>
+
+                        <div class="filterDiv fruit" id="fruit">
+                            <img src="images/Fruit/Strawberry.png" alt="image=">
+
+                            <h4>Strawberry</h4>
+
+                            <p>$5.99</p>
+                        </div>
+
+                        <div class="filterDiv vegetables" id="Vegetables">
+                            <img src="images/Vegetable/Cucumber.png" alt="image= Cucumber">
+                            <h4>Cucumber</h4>
+                            <p>$0.59</p>
+                        </div>
+
+
+                        <div class="filterDiv vegetables" id="Vegetables">
+                            <img src="images/Vegetable/Broccoli.png" alt="image=Broccoli">
+                            <h4>Broccoli</h4>
+                            <p>$2.39</p>
+                        </div>
+
+                        <div class="filterDiv vegetables" id="Vegetables">
+                            <img src="images/Vegetable/Carrots.png" alt="image=Carrots">
+                            <h4>Carrots</h4>
+                            <p>$0.20</p>
+                        </div>
+
+                        <div class="filterDiv vegetables" id="Vegetables">
+                            <img src="images/Vegetable/Celery%20Heart.png" alt="image= Celery Heart">
+                            <h4>Celery Heart</h4>
+                            <p>$3.39</p>
+                        </div>
+
+                        <div class="filterDiv dairy" id="Dairy">
+                            <img src="images/Dairy/Grade-A%20Large%20Eggs.png" alt="image= Grade-A Large Eggs">
+                            <h4>Large Eggs</h4>
+                            <p>$0.69</p>
+                        </div>
+
+                        <div class="filterDiv dairy" id="Dairy">
+                            <img src="images/Dairy/Meijer%202%25%20Reduced%20Fat%20Milk,%20gal.png" alt="image= Reduced Fat Milk">
+                            <h4> Milk </h4>
+                            <p>$1.39</p>
+                        </div>
+
+                        <div class="filterDiv dairy" id="Dairy">
+                            <img src="images/Dairy/Shredded%20Mexican%20Cheese.png" alt="image=Shredded Mexican Cheese">
+                            <h4>Mexican Cheese</h4>
+                            <p>$1.99</p>
+                        </div>
+
+                        <div class="filterDiv dairy" id="Dairy">
+                            <img src="images/Dairy/Salted%20Butter%20Sticks.png" alt="image=Salted Butter Sticks">
+                            <h4>Butter Sticks</h4>
+                            <p>$2.99</p>
+                        </div>
+
+                        <div class="filterDiv meat" id="Meat">
+                            <img src="images/Meat/Jennie-O%20Turkey%20Store%20Lean%20Ground%20Turkey,%2093%25%20Lean,%2016%20oz.png" alt="image= Ground Turkey">
+                            <h4>Ground Turkey</h4>
+                            <p>$4.89</p>
+                        </div>
+
+                        <div class="filterDiv meat" id="Meat">
+                            <img src="images/Meat/All%20Natural%20Boneless%20Pork%20Tenderloin.png" alt="image=All Natural Boneless Pork Tenderloin">
+                            <h4>Pork Tenderloin</h4>
+                            <p>$5.47</p>
+                        </div>
+
+                        <div class="filterDiv meat" id="Meat">
+                            <img src="images/Meat/True%20Goodness%20Boneless%20Skinless%20Chicken%20Breasts.png" alt="image=True Goodness Boneless Skinless Chicken Breasts">
+                            <h4>Chicken Breasts</h4>
+                            <p>$10.18</p>
+                        </div>
+
+                        <div class="filterDiv meat" id="Meat">
+                            <img src="images/Meat/Turkey%20Burger%20Patties.png" alt="image=Turkey Burger Patties">
+                            <h4>Turkey Burger</h4>
+                            <p>$4.79</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Address tag centered and button which brings you back to top of page -->
+        <address id="Footer">
+            <a id="button" href="Food.html">Back to Top</a><br><br>
+            <div class="rowFooter">
+                <div class="columnFooter">
+                    <!--contact, support, and about sample information provided in footer-->
+                    <h3>Contact</h3>
+                    <p style=color:gray;>2150 Virginia Street, New York, NY 60154<br> 555-555-5555<br> name@company.com
+                    </p>
+                </div>
+                <div class="columnFooter">
+                    <h3>Support</h3>
+                    <p style=color:gray;>Terms and Conditions <br> Privacy Policy <br> Return Policy</p>
+                </div>
+                <div class="columnFooter">
+                    <h3>About</h3>
+                    <p style=color:gray;>About <br> News <br> Contact</p>
+                </div>
+            </div>
+        </address>
+    </footer>
+
+
+</body>
+
+</html>

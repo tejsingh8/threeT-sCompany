@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--import charset metadata with title Home-Page. Call to the CSS and JavaScript pages.-->
+
+    <meta charset="utf-8">
+    <title>Recreation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript.js" async></script>
+</head>
+
+<body>
+    <!-- Start of the Header Section -->
+
+    <!-- Code for the Header, header background, and header image -->
+    <div class="header">
+        <div class="imageHeader">
+            <div id="logoImage">
+                <!--Logo image in header, with a link that takes user to the home page when clicked-->
+                <a href="homePage.html"><img src="images/logo.png" alt="logo image"></a>
+                <!--Name of Website in header-->
+                <h1 style="color: white; text-align: center;background-color: black;">3 T's Company</h1>
+            </div>
+            <div id="shoppingCartImage">
+                <img src="images/download.png" alt="shopping cart" class="cartImage"></a><span class="itemCount" style="color: white ;background-color: black;">0</span>
+            </div>
+        </div>
+        <!--Start of section of menu buttons that will take user to the various html pages-->
+
+        <div class="menuButtons">
+            <ul>
+                <li>
+                    <!-- Menu tab is a link that Takes user to home page-->
+
+                    <a href="homePage.html">Home</a>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to clothing page-->
+
+                    <a href="clothesPage.html">Clothing</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered clothing page for specific categories-->
+                        <li>
+                            <a href="clothesPage.html">All</a>
+                        </li>
+                        <li>
+                            <!-- each subsection links to section page with active filter -->
+                            <a href="clothesPage.html?filter=shirts">Shirts</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=pants">Pants</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=hats">Hats</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=shoes">Shoes</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to Recreation page-->
+                    <a href="recreation.html">Recreation</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered recreation page for specific categories-->
+
+                        <li>
+                            <a href="recreation.html">All</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=outdoor">Outdoor</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=exercise">Exercise</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=running">Running</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=hiking">Hiking</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to tech page-->
+                    <a href="tech.html">Tech</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered tech page for specific categories-->
+                        <li>
+                            <a href="tech.html">All</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=phone">Phones</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=laptop">Laptops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=desktop">Desktops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=accessories">Accessories</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to food page-->
+                    <a href="Food.html?filter=all">Food</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered food page for specific categories-->
+                        <li>
+                            <a href="Food.html">All</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=fruit">Fruit</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=vegetable">Vegetables</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=meat">Meat</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=dairy">Dairy</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Menu tab is a link that Takes user to about page-->
+                <li><a href="contactUs.html">About</a></li>
+                <!-- Menu tab is a link that Takes user to log in page-->
+                <li><a href="login-page.html">Log in</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of the header section -->
+    <!-- End of the header section -->
+
+    <!-- Start of the body for the Recreation content -->
+    <main>
+        <!--start of body section with the title of the clothes category-->
+        <div id="body">
+            <div id="bodyContainer">
+                <div id="bodyHeading">
+                    <h1>Recreation</h1>
+                </div>
+                <!--Filter button that will filter the items into categories based on the filter label-->
+                <div class="filterBy">
+                    <div class="menuButtons">
+                        <div id="myBtnContainer">
+                            <ul>
+                                <li class="filterByHeading">
+                                    Filter By
+                                    <ul>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('all')" id="all"> Show
+                                                all</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('outdoor')"> Outdoor</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('exercise')">
+                                                Excersise</button>
+                                        </li>
+                                        <button class="btn" onclick="filterSelection('running')"> Running</button>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('hiking')"> Hiking</button>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!--Start of the section where the items for the clothes category will be listed. Each clothing item contains an image of the item, along with the name and price.-->
+        <div id="items">
+            <div class="row">
+                <div class="filterDiv outdoor">
+                    <img src="images/Recreation-Outdoor/rec-firepit.jpg" alt="Kingson Fire Pit" class="recreation-outdoor">
+                    <h4>Kingson Fire Pit</h4>
+                    <p>$48.99</p>
+                </div>
+
+                <div class="filterDiv outdoor">
+                    <img src="images/Recreation-Outdoor/rec-trampoline.jpg" alt="Skywalker Trampoline" class="recreation-outdoor">
+                    <h4>Skywalker Trampoline</h4>
+                    <p>$399.99</p>
+                </div>
+
+                <div class="filterDiv outdoor">
+                    <img src="images/Recreation-Outdoor/rec-tent.jpg" alt="Dog House 6 Tent" class="recreation-outdoor">
+                    <h4>Dog House 6 Tent</h4>
+                    <p>$349.95</p>
+                </div>
+
+                <div class="filterDiv outdoor">
+                    <img src="images/Recreation-Outdoor/rec-kayak.jpg" alt="Intex Kayak" class="recreation-outdoor">
+                    <h4>Intex Kayak</h4>
+                    <p>$105.00</p>
+                </div>
+
+                <div class="filterDiv exercise">
+                    <img src="images/Recreation-Exercise/rec-dip-station.jpg" alt="Dip Station" class="recreation-exercise">
+                    <h4>Dip Station</h4>
+                    <p>$139.99</p>
+                </div>
+
+                <div class="filterDiv exercise">
+                    <img src="images/Recreation-Exercise/rec-elliptical.webp" alt="ProForm Elliptical" class="recreation-exercise">
+                    <h4>ProForm Elliptical</h4>
+                    <p>$1,699.99</p>
+                </div>
+
+                <div class="filterDiv exercise">
+                    <img src="images/Recreation-Exercise/rec-peleton-bike.jpg" alt="Peleton Bike" class="recreation-exercise">
+                    <h4>Peleton Bike</h4>
+                    <p>$1,895.99</p>
+                </div>
+
+                <div class="filterDiv exercise">
+                    <img src="images/Recreation-Exercise/rec-peleton-treadmill.png" alt="Peleton Tread" class="recreation-exercise">
+                    <h4>Peleton Tread</h4>
+                    <p>$4,295.99</p>
+                </div>
+
+                <div class="filterDiv running">
+                    <img src="images/Recreation-Running/rec-running-shoes.jpg" alt="Brooks Ghost 13" class="recreation-running">
+                    <h4>Brooks Ghost 13</h4>
+                    <p>$129.99</p>
+                </div>
+
+                <div class="filterDiv running">
+                    <img src="images/Recreation-Running/rec-running-quarter-zip.jpg" alt="Reebok Sweatshirt" class="recreation-running">
+                    <h4>Reebok Sweatshirt </h4>
+                    <p>$39.99</p>
+                </div>
+
+                <div class="filterDiv running">
+                    <img src="images/Recreation-Running/rec-running-light.jpg" alt="Nathan Flashlight" class="recreation-running">
+                    <h4>Nathan Flashlight</h4>
+                    <p>$55.49</p>
+                </div>
+
+                <div class="filterDiv running">
+                    <img src="images/Recreation-Running/rec-running-headphones.jpg" alt="Beats Powerbeats" class="recreation-running">
+                    <h4>Beats Powerbeats</h4>
+                    <p>$149.99</p>
+                </div>
+
+                <div class="filterDiv hiking">
+                    <img src="images/Recreation-Hiking/rec-hiking-shoes.jpg" alt="Hiking Shoes" class="recreation-hiking">
+                    <h4>Hiking Shoes</h4>
+                    <p>$99.99</p>
+                </div>
+
+                <div class="filterDiv hiking">
+                    <img src="images/Recreation-Hiking/rec-hiking-jacket.jpg" alt="Stretch Jackets" class="recreation-hiking">
+                    <h4>Stretch Jacket</h4>
+                    <p>$85.99</p>
+                </div>
+
+                <div class="filterDiv hiking">
+                    <img src="images/Recreation-Hiking/rec-hiking-backpack.jpg" alt="Hiking Backpack" class="recreation-hiking">
+                    <h4>Hiking Backpack</h4>
+                    <p>$46.99</p>
+                </div>
+
+                <div class="filterDiv hiking">
+                    <img src="images/Recreation-Hiking/rec-hiking-stick.jpg" alt="Hiking Poles" class="recreation-hiking">
+                    <h4>Hiking Poles</h4>
+                    <p>$21.99</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Address tag centered and button which brings you back to top of page -->
+        <address id="Footer">
+            <a id="button" href="recreation.html">Back to Top</a><br><br>
+            <div class="rowFooter">
+                <div class="columnFooter">
+                    <!--contact, support, and about sample information provided in footer-->
+                    <h3>Contact</h3>
+                    <p style="color:gray;">2150 Virginia Street, New York, NY 60154<br> 555-555-5555<br>
+                        name@company.com
+                    </p>
+                </div>
+                <div class="columnFooter">
+                    <h3>Support</h3>
+                    <p style="color:gray;">Terms and Conditions <br> Privacy Policy <br> Return Policy</p>
+                </div>
+                <div class="columnFooter">
+                    <h3>About</h3>
+                    <p style="color:gray;">About <br> News <br> Contact</p>
+                </div>
+            </div>
+        </address>
+    </footer>
+</body>
+
+</html>

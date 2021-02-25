@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--import charset metadata with title Home-Page. Call to the CSS and JavaScript pages.-->
+
+    <meta charset="utf-8">
+    <title>Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="javascript.js" async>
+    </script>
+
+</head>
+
+<body>
+    <!-- Start of the Header Section -->
+    <!-- Start of the Header Section -->
+    <div class="header">
+        <div class="imageHeader">
+            <div id="logoImage">
+                <!--Logo image in header, with a link that takes user to the home page when clicked-->
+
+                <a href="homePage.html">
+                    <img src="images/logo.png" alt="logo image">
+                </a>
+                <!--Name of Website in header-->
+
+                <h1 style="color: white; text-align: center;background-color: black;">3 T's Company</h1>
+            </div>
+            <!--Image of shopping cart in header-->
+
+            <div id="shoppingCartImage">
+                <img src="images/download.png" alt="shopping cart" class="cartImage"><span class="itemCount" style="color: white ;background-color: black;">0</span>
+            </div>
+        </div>
+        <!--Start of section of menu buttons that will take user to the various html pages-->
+
+        <div class="menuButtons">
+            <ul>
+                <li>
+                    <!-- Menu tab is a link that Takes user to home page-->
+
+                    <a href="homePage.html">Home</a>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to clothing page-->
+
+                    <a href="clothesPage.html">Clothing</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered clothing page for specific categories-->
+                        <li>
+                            <a href="clothesPage.html">All</a>
+                        </li>
+                        <li>
+                            <!-- each subsection links to section page with active filter -->
+                            <a href="clothesPage.html?filter=shirts">Shirts</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=pants">Pants</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=hats">Hats</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=shoes">Shoes</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to recreation page-->
+
+                    <a href="recreation.html">Recreation</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered recreation page for specific categories-->
+
+                        <li>
+                            <a href="recreation.html">All</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=outdoor">Outdoor</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=exercise">Exercise</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=running">Running</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=hiking">Hiking</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to tech page-->
+
+                    <a href="tech.html">Tech</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered tech page for specific categories-->
+
+                        <li>
+                            <a href="tech.html">All</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=phone">Phones</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=laptop">Laptops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=desktop">Desktops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=accessories">Accessories</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to food page-->
+
+                    <a href="Food.html?filter=all">Food</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered food page for specific categories-->
+
+                        <li>
+                            <a href="Food.html">All</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=fruit">Fruit</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=vegetable">Vegetables</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=meat">Meat</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=dairy">Dairy</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Menu tab is a link that Takes user to about page-->
+
+                <li><a href="contactUs.html">About</a></li>
+                <!-- Menu tab is a link that Takes user to log in page-->
+
+                <li><a href="login-page.html">Log in</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of the header section -->
+    <!-- End of the header section -->
+
+    <!-- Start of the body for the Recreation content -->
+    <main>
+        <!--start of body section with the title of the clothes category-->
+
+        <div id="body">
+            <div id="bodyContainer">
+                <div id="bodyHeading">
+                    <h1>Tech</h1>
+                </div>
+                <!--Filter button that will filter the items into categories based on the filter label-->
+
+                <div class="filterBy">
+                    <div class="menuButtons">
+                        <div id="myBtnContainer">
+                            <ul>
+                                <li class="filterByHeading">
+                                    Filter By
+                                    <ul>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('all')" id="all"> Show
+                                                all</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('phone')"> Phones</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('laptop')"> Laptop</button>
+                                        </li>
+                                        <button class="btn" onclick="filterSelection('desktop')"> Desktop</button>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('accessories')">
+                                                Accessories</button>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--Start of the section where the items for the clothes category will be listed. Each clothing item contains an image of the item, along with the name and price.-->
+
+            <div id="items">
+                <div class="row">
+                    <div class="filterDiv phone">
+                        <img src="images/Tech-Phone/tech-phone-iphone12pro.jpg" alt="iPhone 12 Pro" class="recreation-outdoor">
+                        <h4>iPhone 12 Pro</h4>
+                        <p>$999</p>
+                    </div>
+
+                    <div class="filterDiv phone">
+                        <img src="images/Tech-Phone/tech-phone-iphone12mini.webp" alt="iPhone 12 Mini" class="recreation-outdoor">
+                        <h4>iPhone 12 Mini</h4>
+                        <p>$699</p>
+                    </div>
+
+                    <div class="filterDiv phone">
+                        <img src="images/Tech-Phone/tech-phone-Gpixel5.jpg" alt="Google Pixel 5" class="recreation-outdoor">
+                        <h4>Google Pixel 5</h4>
+                        <p>$649</p>
+                    </div>
+
+                    <div class="filterDiv phone">
+                        <img src="images/Tech-Phone/tech-phone-samsungGalaxyS20.webp" alt="Samsung Galaxy S20 5g" class="recreation-outdoor">
+                        <h4>Samsung Galaxy S20 5G</h4>
+                        <p>$899</p>
+                    </div>
+
+                    <div class="filterDiv laptop">
+                        <img src="images/Tech-Laptop/tech-laptop-dellXPS13.jpg" alt="Dell XPS 13" class="recreation-exercise">
+                        <h4>Dell XPS 13</h4>
+                        <p>$799</p>
+                    </div>
+
+                    <div class="filterDiv laptop">
+                        <img src="images/Tech-Laptop/tech-laptop-hpEnvy15-6.jpg" alt="HP Envy x360 15.6' class=" recreation-exercise ">
+                        <h4>HP Envy x360 15.6"</h4>
+                        <p>$849.99</p>
+                    </div>
+
+                    <div class="filterDiv laptop">
+                        <img src="images/Tech-Laptop/tech-laptop-lenovoYogaC940.jpg" alt="Lenovo Yoga C940" class="recreation-exercise">
+                        <h4>Lenovo Yoga C940</h4>
+                        <p>$999.99</p>
+                    </div>
+
+                    <div class="filterDiv laptop">
+                        <img src="images/Tech-Laptop/tech-laptop-macbookPro16.jpg" alt="Macbook Pro 16 inch" class="recreation-exercise">
+                        <h4>Macbook Pro 16 inch</h4>
+                        <p>$2,399</p>
+                    </div>
+
+                    <div class="filterDiv desktop">
+                        <img src="images/Tech-Desktops/tech-desktop-dellXPS8930.jpg" alt="Dell XPS 8930" class="recreation-running">
+                        <h4>Dell XPS 8930</h4>
+                        <p>$1,099.99</p>
+                    </div>
+
+                    <div class="filterDiv desktop">
+                        <img src="images/Tech-Desktops/tech-desktop-HPproOne-600-G5.jpg" alt="HP ProOne 600" class="recreation-running">
+
+                        <h4>HP ProOne 600</h4>
+
+                        <p>$1,369.99</p>
+                    </div>
+
+                    <div class="filterDiv desktop">
+                        <img src="images/Tech-Desktops/tech-desktop-HPpavilionGaming.jpg" alt="HP Desktop" class="recreation-running">
+                        <h4>HP Desktop</h4>
+                        <p>$629.99</p>
+                    </div>
+
+                    <div class="filterDiv desktop">
+                        <img src="images/Tech-Desktops/tech-desktop-appleMacPro.jpg" alt="Apple MacPro" class="recreation-running">
+                        <h4>Apple MacPro</h4>
+                        <p>$5,999</p>
+                    </div>
+
+                    <div class="filterDiv accessories">
+                        <img src="images/Tech-Accessories/tech-access-dellP2419h24Monitor.jpg" alt="Dell 24" Monitor " class="recreation-hiking ">
+                        <h4>Dell 24" Monitor</h4>
+                        <p>$189.99</p>
+                    </div>
+
+                    <div class="filterDiv accessories">
+                        <img src="images/Tech-Accessories/tech-access-k380Keyboard.png" alt="Logitech K380 Keyboard" class="recreation-hiking">
+                        <h4>Logitech K380 Keyboard</h4>
+                        <p>$29.99</p>
+                    </div>
+
+                    <div class="filterDiv accessories">
+                        <img src="images/Tech-Accessories/tech-access-logitechZ200Speakers.jpeg" alt="Logitech Z200 Speaker" class="recreation-hiking">
+                        <h4>Logitech Z200 Speakers</h4>
+                        <p>$24.99</p>
+                    </div>
+
+                    <div class="filterDiv accessories">
+                        <img src="images/Tech-Accessories/tech-access-m190Mouse.png" alt="Logitech Z200 Speaker" class="recreation-hiking">
+                        <h4>Logitech M190 Mouse</h4>
+                        <p>$14.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- Address tag centered and button which brings you back to top of page -->
+        <address id="Footer">
+            <a id="button" href="tech.html">Back to Top</a><br><br>
+            <div class="rowFooter">
+                <div class="columnFooter">
+                            <!--contact, support, and about sample information provided in footer-->
+
+                    <h3>Contact</h3>
+                    <p style=color:gray;>2150 Virginia Street, New York, NY 60154<br> 555-555-5555<br> name@company.com
+                    </p>
+                </div>
+                <div class="columnFooter">
+                    <h3>Support</h3>
+                    <p style=color:gray;>Terms and Conditions <br> Privacy Policy <br> Return Policy</p>
+                </div>
+                <div class="columnFooter">
+                    <h3>About</h3>
+                    <p style=color:gray;>About <br> News <br> Contact</p>
+                </div>
+            </div>
+        </address>
+    </footer>
+</body>
+
+</html>

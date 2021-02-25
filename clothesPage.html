@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--import charset metadata with title Home-Page. Call to the CSS and JavaScript pages.-->
+    <meta charset="utf-8">
+    <title>Clothes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript.js" async>
+    </script>
+</head>
+
+<body>
+    <!-- Start of the Header Section -->
+    <!-- Start of the Header Section -->
+    <div class="header">
+        <div class="imageHeader">
+            <div id="logoImage">
+                <!--Logo image in header, with a link that takes user to the home page when clicked-->
+                <a href="homePage.html">
+                    <img src="images/logo.png" alt="logo image">
+                </a>
+                <!--Name of Website in header-->
+                <h1 style="color: white; text-align: center;background-color: black;">3 T's Company</h1>
+            </div>
+            <!--Image of shopping cart in header-->
+            <div id="shoppingCartImage">
+                <img src="images/download.png" alt="shopping cart" class="cartImage"><span class="itemCount" style="color: white ;background-color: black;">0</span>
+            </div>
+        </div>
+        <!--Start of section of menu buttons that will take user to the various html pages-->
+        <div class="menuButtons">
+            <ul>
+                <li>
+                    <!-- Menu tab is a link that Takes user to home page-->
+                    <a href="homePage.html">Home</a>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to clothing page-->
+                    <a href="clothesPage.html">Clothing</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered clothing page for specific categories-->
+                        <li>
+                            <a href="clothesPage.html">All</a>
+                        </li>
+                        <li>
+                            <!-- each subsection links to section page with active filter -->
+                            <a href="clothesPage.html?filter=shirts">Shirts</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=pants">Pants</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=hats">Hats</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=shoes">Shoes</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to recreation page-->
+                    <a href="recreation.html">Recreation</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered recreation page for specific categories-->
+                        <li>
+                            <a href="recreation.html">All</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=outdoor">Outdoor</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=exercise">Exercise</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=running">Running</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=hiking">Hiking</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to tech page-->
+                    <a href="tech.html">Tech</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered tech page for specific categories-->
+                        <li>
+                            <a href="tech.html">All</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=phone">Phones</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=laptop">Laptops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=desktop">Desktops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=accessories">Accessories</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <!-- Menu tab is a link that Takes user to food page-->
+                    <a href="Food.html?filter=all">Food</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered food page for specific categories-->
+                        <li>
+                            <a href="Food.html">All</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=fruit">Fruit</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=vegetable">Vegetables</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=meat">Meat</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=dairy">Dairy</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Menu tab is a link that Takes user to about page-->
+                <li><a href="contactUs.html">About</a></li>
+                <!-- Menu tab is a link that Takes user to log in page-->
+                <li><a href="login-page.html">Log in</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of the header section -->
+    <!-- End of the header section -->
+
+    <!-- Start of the body for the Clothes content -->
+    <main>
+        <!--start of body section with the title of the clothes category-->
+        <div id="body">
+            <div id="bodyContainer">
+                <div id="bodyHeading">
+                    <h1>Clothes</h1>
+                </div>
+                <!--Filter button that will filter the items into categories based on the filter label-->
+                <div class="filterBy">
+                    <div class="menuButtons">
+                        <div id="myBtnContainer">
+                            <ul>
+                                <li class="filterByHeading">
+                                    Filter By
+                                    <ul>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('all')" id="all"> Show
+                                                all</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('shirts')"> Shirts</button>
+                                        </li>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('pants')"> Pants</button>
+                                        </li>
+                                        <button class="btn" onclick="filterSelection('hats')"> Hats</button>
+                                        <li>
+                                            <button class="btn" onclick="filterSelection('shoes')"> Shoes</button>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--Start of the section where the items for the clothes category will be listed. Each clothing item contains an image of the item, along with the name and price.-->
+            <div id="items">
+                <div class="row">
+                    <div class="filterDiv shirts">
+                        <img src="images/Clothes-Shirts/NikeDryVictorySolidGolfPolo.png" alt="Nike Polo" class="recreation-outdoor">
+                        <h4>Nike Polo</h4>
+                        <p>$30.99</p>
+                    </div>
+
+                    <div class="filterDiv shirts">
+                        <img src="images/Clothes-Shirts/adidasTeamUtilityPolo.png" alt="Adidas Polo" class="recreation-outdoor">
+                        <h4>Adidas Polo</h4>
+                        <p>$24.99</p>
+                    </div>
+
+                    <div class="filterDiv shirts">
+                        <img src="images/Clothes-Shirts/FilaBiellaItaliaPolo.png" alt="Fila Polo" class="recreation-outdoor">
+                        <h4>Fila Polo</h4>
+                        <p>$42.95</p>
+                    </div>
+
+                    <div class="filterDiv shirts">
+                        <img src="images/Clothes-Shirts/UnderArmourTeamRivalPolo.png" alt="UA Polo" class="recreation-outdoor">
+                        <h4>Under Armour Polo</h4>
+                        <p>$30.00</p>
+                    </div>
+
+                    <div class="filterDiv pants">
+                        <img src="images/Clothes-Pants/adidasOriginalsChile20TrackPants.png" alt="Adidas Pants" class="recreation-exercise">
+                        <h4>Adidas Pants</h4>
+                        <p>$45.99</p>
+                    </div>
+
+                    <div class="filterDiv pants">
+                        <img src="images/Clothes-Pants/CSGCargoJogger.png" alt="CSG Joggers" class="recreation-exercise">
+                        <h4>CSG Joggers</h4>
+                        <p>$35.99</p>
+                    </div>
+
+                    <div class="filterDiv pants">
+                        <img src="images/Clothes-Pants/JordanJumpmanAirFleecePants.png" alt="Jordan Pants" class="recreation-exercise">
+                        <h4>Jordan Pants</h4>
+                        <p>$55.99</p>
+                    </div>
+
+                    <div class="filterDiv pants">
+                        <img src="images/Clothes-Pants/NikeTeamDryShowtimePants.png" alt="Nike Pants" class="recreation-exercise">
+                        <h4>Nike Pants</h4>
+                        <p>$58.99</p>
+                    </div>
+
+                    <div class="filterDiv hats">
+                        <img src="images/Clothes-Hats/adidasOriginalsRelaxedNightCap.png" alt="Adidas Cap" class="recreation-running">
+                        <h4>Adidas Cap</h4>
+                        <p>$24.99</p>
+                    </div>
+
+                    <div class="filterDiv hats">
+                        <img src="images/Clothes-Hats/NewEraMLBNineFiftySnapbackCap.png" alt="MLB Cap" class="recreation-running">
+                        <h4>MLB Cap</h4>
+                        <p>$15.99</p>
+                    </div>
+
+                    <div class="filterDiv hats">
+                        <img src="images/Clothes-Hats/NikeFuturaPrecurveAdjustableCap.png" alt="Nike Cap" class="recreation-running">
+                        <h4>Nike Cap</h4>
+                        <p>$26.49</p>
+                    </div>
+
+                    <div class="filterDiv hats">
+                        <img src="images/Clothes-Hats/UnderArmourBlitzingThreeCap.png" alt="UA Cap" class="recreation-running">
+                        <h4>Under Armour Cap</h4>
+                        <p>$23.99</p>
+                    </div>
+
+                    <div class="filterDiv shoes">
+                        <img src="images/Clothes-Shoes/adidasOriginalsZXTwoKBoost.png" alt="Adidas Boost" class="recreation-hiking">
+                        <h4>Adidas Boost</h4>
+                        <p>$87.99</p>
+                    </div>
+
+                    <div class="filterDiv shoes">
+                        <img src="images/Clothes-Shoes/JordanSixRings.png" alt="Jordan 6 Rings" class="recreation-hiking">
+                        <h4>Jordan 6 Rings</h4>
+                        <p>$120.99</p>
+                    </div>
+
+                    <div class="filterDiv shoes">
+                        <img src="images/Clothes-Shoes/NikeAirForceOneLow.png" alt="Nike Low" class="recreation-hiking">
+                        <h4>Nike Low</h4>
+                        <p>$78.99</p>
+                    </div>
+
+                    <div class="filterDiv shoes">
+                        <img src="images/Clothes-Shoes/VansOldSkool.png" alt="Vans Skool" class="recreation-hiking">
+                        <h4>Vans Skool</h4>
+                        <p>$71.99</p>
+                    </div>
+                </div>
+            </div>
+
+
+    </main>
+    <footer>
+        <!-- Address tag centered and button which brings you back to top of page -->
+        <address id="Footer">
+            <a id="button" href="clothesPage.html">Back to Top</a><br><br>
+            <div class="rowFooter">
+                <div class="columnFooter">
+        <!--contact, support, and about sample information provided in footer-->
+                    <h3>Contact</h3>
+                    <p style=color:gray;>2150 Virginia Street, New York, NY 60154<br> 555-555-5555<br> name@company.com
+                    </p>
+                </div>
+                <div class="columnFooter">
+                    <h3>Support</h3>
+                    <p style=color:gray;>Terms and Conditions <br> Privacy Policy <br> Return Policy</p>
+                </div>
+                <div class="columnFooter">
+                    <h3>About</h3>
+                    <p style=color:gray;>About <br> News <br> Contact</p>
+                </div>
+            </div>
+        </address>
+    </footer>
+</body>
+
+</html>

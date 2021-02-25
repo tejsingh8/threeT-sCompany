@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascript.js" async></script>
+</head>
+
+<body>
+
+    <!-- Start of the Header Section -->
+    <!-- Start of the Header Section -->
+    <div class="header">
+        <div class="imageHeader">
+            <div id="logoImage">
+                <a href="homePage.html"><img src="images/logo.png" alt="logo image"></a>
+                <h1 style="color: white; text-align: center;background-color: black;">3 T's Company</h1>
+            </div>
+            <div id="shoppingCartImage">
+                <img src="images/download.png" alt="shopping cart" class="cartImage"><span class="itemCount" style="color: white ;background-color: black;">0</span>
+            </div>
+        </div>
+
+        <div class="menuButtons">
+            <ul>
+                <li>
+                    <a href="homePage.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="clothesPage.html">Clothing</a>
+                    <ul>
+                        <!-- Drop down items take user to filtered clothing page for specific categories-->
+                        <li>
+                            <a href="clothesPage.html">All</a>
+                        </li>
+                        <li>
+                            <!-- each subsection links to section page with active filter -->
+                            <a href="clothesPage.html?filter=shirts">Shirts</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=pants">Pants</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=hats">Hats</a>
+                        </li>
+                        <li>
+                            <a href="clothesPage.html?filter=shoes">Shoes</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="recreation.html">Recreation</a>
+                    <ul>
+                        <li>
+                            <a href="recreation.html">All</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=outdoor">Outdoor</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=exercise">Exercise</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=running">Running</a>
+                        </li>
+                        <li>
+                            <a href="recreation.html?filter=hiking">Hiking</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="tech.html">Tech</a>
+                    <ul>
+                        <li>
+                            <a href="tech.html">All</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=phone">Phones</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=laptop">Laptops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=desktop">Desktops</a>
+                        </li>
+                        <li>
+                            <a href="tech.html?filter=accessories">Accessories</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="Food.html?filter=all">Food</a>
+                    <ul>
+                        <li>
+                            <a href="Food.html">All</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=fruit">Fruit</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=vegetable">Vegetables</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=meat">Meat</a>
+                        </li>
+                        <li>
+                            <a href="Food.html?filter=dairy">Dairy</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="contactUs.html">About</a></li>
+                <li><a href="login-page.html">Log in</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of the header section -->
+    <!-- End of the header section -->
+    <main>
+        <h2 id="homeTitle">HOME PAGE</h2>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="images/Home-Page/Clothes.jpg" style="width:100%; height: 700px">
+                <div class="text" style="width: auto">CLOTHES</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="images/Home-Page/RecreationTwo.jpg" style="width:100%; height: 700px">
+                <div class="text" style="width: auto">RECREATION</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="images/Home-Page/Tech.jpg" style="width:100%; height: 700px">
+                <div class="text" style="width: auto">TECH</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="images/Home-Page/FoodTwo.jpg" style="width:100%; height: 700px">
+                <div class="text" style="width: auto">FOOD</div>
+            </div>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <br><br><br><br>
+
+
+        <div id="items">
+            <div class="row">
+                <div class="column">
+                    <img src="images/Home-Page/Clothes.jpg" alt="image=Clothes" style="width: 200px; height: 150px">
+                    <a href="clothesPage.html" class="itemTitle">
+                        <h1>Clothes</h1>
+                    </a>
+                </div>
+                <div class="column">
+                    <img src="images/Home-Page/RecreationTwo.jpg" alt="image=Recreation" style="width: 200px; height: 150px">
+                    <a href="recreation.html" class="itemTitle">
+                        <h1>Recreation</h1>
+                    </a>
+                </div>
+                <div class="column">
+                    <img src="images/Home-Page/Tech.jpg" alt="image=Tech" style="width: 200px; height: 150px">
+                    <a href="tech.html" class="itemTitle">
+                        <h1>Tech</h1>
+                    </a>
+                </div>
+                <div class="column">
+                    <img src="images/Home-Page/FoodTwo.jpg" alt="image=Food" style="width: 200px; height: 150px">
+                    <a href="Food.html" class="itemTitle">
+                        <h1>Food</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Start of the body for the Food content -->
+
+    <footer>
+        <!-- Address tag centered and button which brings you back to top of page -->
+        <address id="Footer">
+            <a id="button" href="homePage.html">Back to Top</a><br><br>
+            <div class="rowFooter">
+                <div class="columnFooter">
+                    <h3>Contact</h3>
+                    <p style=color:gray;>2150 Virginia Street, New York, NY 60154<br> 555-555-5555<br> name@company.com
+                    </p>
+                </div>
+                <div class="columnFooter">
+                    <h3>Support</h3>
+                    <p style=color:gray;>Terms and Conditions <br> Privacy Policy <br> Return Policy</p>
+                </div>
+                <div class="columnFooter">
+                    <h3>About</h3>
+                    <p style=color:gray;>About <br> News <br> Contact</p>
+                </div>
+            </div>
+        </address>
+    </footer>
+</body>
+
+</html>
